@@ -1,0 +1,47 @@
+\documentclass{layout/layout-format}
+
+\usepackage[utf8]{inputenc}  %% Specifying encoding
+\usepackage{relsize}  %% adjusting the size of the page
+\usepackage{ragged2e} %% for using 'justify' alignment
+\usepackage{algorithm}  %% for using algorithms
+\usepackage{algpseudocode}  %%
+\usepackage{natbib}   %% for using bibliography
+\usepackage{pdfpages}
+\usepackage[none]{hyphenat}
+\usepackage{longtable}
+
+% Miscellaneous commands
+\usepackage{stackengine}
+\def\delequal{\mathrel{\ensurestackMath{\stackon[1pt]{=}{\scriptstyle\Delta}}}}  % 'delta-equal symbol' for mathematical notation of definition
+
+
+\renewcommand{\deg}{\si{\degree}\xspace}
+
+\begin{document}
+	
+	% Title and Coverpage
+	\title{Bayesian Optimisation by Density-Ratio Estimation for Multi-objective problems}
+	\subtitle{Background, literature study, and design methodology}
+	\author{Dushyant Khatri}
+	%\subject{COMM510: Multi-objective Optimisation and Decision-making}
+	\coverimage{layout/uexeter/coverpage.pdf}
+	\definecolor{title}{RGB}{255,255,255}
+	\makecover
+
+	\frontmatter
+	\input{frontmatter/title}
+	\input{frontmatter/declaration}
+	\input{frontmatter/abstract}
+	\input{frontmatter/nomenclature}
+	\tableofcontents
+
+	\mainmatter
+	\input{mainmatter/chpt1}
+	\input{mainmatter/chpt2}
+	\input{mainmatter/chpt3}
+	\input{mainmatter/chpt4}
+	
+	\bibliography{references/bibfile}
+	\bibliographystyle{plain}
+	
+\end{document}
